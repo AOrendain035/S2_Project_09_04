@@ -28,7 +28,9 @@
         </nav>
     </header>
     <section>
+        <!-- Below, I created a form. This form will be used to gain information about the customer and for them to place their order. -->
         <form action="http://www.mill_computers.com/orders/process.cgi" method="POST" name="form">
+            <!-- The first part of the form will feature different inputs that will be used to gain information about the customer. This information will be their first name, last name, address, et cetera; all of it is vital. -->
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
                 <div class="formRow">
@@ -68,6 +70,7 @@
                         required>
                 </div>
             </fieldset>
+            <!-- For the second part of the form, the customer will be able to input their desired purchase items. These items are composed of specifications/different components for their computers. The first set of items will be displayed through selection lists. These items include processor speeds, monitor size, et cetera. -->
             <fieldset>
                 <legend>Purchase Options</legend>
                 <div class="formRow">
@@ -104,7 +107,51 @@
                         <option value="1 TB">1 TB</option>
                     </select>
                 </div>
+                <!-- The second set of items will be presented through yes/no input fields. These items include a DVD Burner, a Tuner card, and/or a Media Card Reader. -->
+                <div class="formRow">
+                    <label for="dvd">DVD Burner</label>
+                    <fieldset class="optGroup">
+                        <label for="dYes">Yes</label>
+                        <input name="dvd" id="dYes" value="yes" type="radio">
+                        <label for="dNo">No</label>
+                        <input name="dvd" id="dNo" value="no" type="radio">
+                    </fieldset>
+                </div>
+                <div class="formRow">
+                    <label for="tuner">Tuner Card</label>
+                    <fieldset class="optGroup">
+                        <label for="tYes">Yes</label>
+                        <input name="tuner" id="tYes" value="yes" type="radio">
+                        <label for="tNo">No</label>
+                        <input name="tuner" id="tNo" value="no" type="radio">
+                    </fieldset>
+                </div>
+                <div class="formRow">
+                    <label for="mcard">Media Card Reader</label>
+                    <fieldset class="optGroup">
+                        <label for="tYes">Yes</label>
+                        <input name="mcard" id="tYes" value="yes" type="radio">
+                        <label for="tNo">No</label>
+                        <input name="mcard" id="tNo" value="no" type="radio">
+                    </fieldset>
+                </div>
+                <!-- The last "item" is an optional 24 month warranty that will be presented through a check box. The user can either choose to click on it or not. -->
+                <div class="formRow">
+                    <input name="warranty" id="warranty" value="yes" type="checkbox">
+                    <label for="warranty">Add a 24-month extended warranty?</label>
+                </div>
+                <!-- There is also a comment box within the form. This will be the area where the user will be able to request additional informatiuon or comments on their order. -->
+                <div class="formRow">
+                    <label for="commBox">Additional Information or Comments on the Order?</label>
+                    <textarea name="commBox" id="commBox"></textarea>
+                </div>
             </fieldset>
+            <!-- Finally, I added a set of three buttons. Thes buttons are what the user will click at the end. They are to submit the order, cancel the order, and to contact the seller; respectively. -->
+            <div id="buttons">
+                <input type="submit" value="Send Order" />
+                <input type="reset" value="Cancel Order" />
+                <input type="command" value="Contact Me" />
+            </div>
         </form>
     </section>
 </body>
