@@ -16,7 +16,97 @@
 </head>
 
 <body>
-    <form action="http://www.mill_computers.com/orders/process.cgi" method="POST" name="form"></form>
+    <header>
+        <img src="mc_logo.png" alt="Millenium Computers Logo">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Order</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form action="http://www.mill_computers.com/orders/process.cgi" method="POST" name="form">
+            <fieldset id="custInfo">
+                <legend>Customer Information</legend>
+                <div class="formRow">
+                    <label for="name">First Name*</label>
+                    <input name="fName" id="fname" type="text" placeholder="first name" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="name">Last Name*</label>
+                    <input name="lName" id="lname" type="text" placeholder="last name" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="street">Street Address</label>
+                    <input name="street" id="street" type="text" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="city">City</label>
+                    <input name="city" id="city" type="text" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="state">State</label>
+                    <input name="state" id="state" type="text" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="zip">Zip Code</label>
+                    <input name="zip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$"
+                        required>
+                </div>
+
+                <div class="formRow">
+                    <label for="phone">Phone Number</label>
+                    <input name="phone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                        required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Purchase Options</legend>
+                <div class="formRow">
+                    <label for="pSpeed">Processor Speed</label>
+                    <select name="pSpeed" id="pSpeed">
+                        <option value="3.2 GHz">3.2 GHz</option>
+                        <option value="4.0 GHz">4.0 GHz</option>
+                        <option value="5.2 GHz">5.2 GHz</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <label for="mem">Memory</label>
+                    <select name="mem" id="mem">
+                        <option value="1 GB">1 GB</option>
+                        <option value="2 GB">2 GB</option>
+                        <option value="4 GB">4 GB</option>
+                        <option value="8 GB">8 GB</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <label for="monitor">Monitor Size</label>
+                    <select name="monitor" id="monitor">
+                        <option value="15">15</option>
+                        <option value="17">17</option>
+                        <option value="19">19</option>
+                        <option value="21">21</option>
+                    </select> </div>
+                <div class="formRow">
+                    <label for="hd">Hard Drive</label>
+                    <select name="hd" id="hd">
+                        <option value="240 GB">240 GB</option>
+                        <option value="500 GB">500 GB</option>
+                        <option value="750 GB">750 GB</option>
+                        <option value="1 TB">1 TB</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+    </section>
 </body>
 
 </html>
