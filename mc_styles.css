@@ -11,7 +11,7 @@ html {
     width: 100%;
 }
 
-/* Below, I created a style that gives the body a width of 86% of the html page. */
+/* Below, I created a style that gives the body a width of 86% of the html page. I also inserted a line that gives it a background color of white; this was to add to the look of actually being a regular form. Finally, I centered the body by giving the right and left margins a value of auto. This means that both margins are automatically going to change sizes to have the same distance. */
 body {
     width: 86%;
     background-color: white;
@@ -19,27 +19,32 @@ body {
     margin-right: auto;
 }
 
+/* Below, I made it so that the body element wouldn't undergo container collapse. Meaning that its content won't get spilled out.*/
 body::after {
     display: table;
     content: "";
     clear: both;
 }
 
+/* For the banner image, I added styles that make the image go across the entire body and have a certain height so as to make it more noticeable. */
 body>header>img {
     display: block;
     width: 100%;
     height: 8em;
 }
 
+/* Underneath, I gave each of the nav components a width of 25% so that the entire nav would stretch across the body. */
 body>header>nav li {
     width: 25%;
 }
 
+/* The styles below are just to ensure that the nav components stay in the same line. */
 nav li {
     display: block;
     float: left;
 }
 
+/* Underneath, I added styles that directly affect the entire nav element. I ensured that the nav would occupy the entire width of the body element, that its components' text would be centered/not be underlined/and have a text color of red, and so that the text within the nav would be slightly larger than the text of the actual web page and that it would be uniform in size. */
 nav {
     display: block;
     text-align: center;
