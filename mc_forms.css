@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+
+
+/* Below, I made styles for the input fields for the first name, last name, street, city, state, zip, and phone; these styles will make the field green when the fields have the focus on them and the info is valid. If the information is invalid, the fields will turn a redish color. These styles only help to let the user know whether their info input is right or wrong. */
+input#fname:focus:valid,
+input#lname:focus:valid,
+input#street:focus:valid,
+input#city:focus:valid,
+input#state:focus:valid,
+input#zip:focus:valid,
+input#phone:focus:valid {
+    background: rgb(220, 255, 220);
+}
+
+input#fname:focus:invalid,
+input#lname:focus:invalid,
+input#street:focus:invalid,
+input#city:focus:invalid,
+input#state:focus:invalid,
+input#zip:focus:invalid,
+input#phone:focus:invalid {
+    background: rgb(255, 232, 233);
+}

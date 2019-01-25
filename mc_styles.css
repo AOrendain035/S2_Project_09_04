@@ -3,7 +3,7 @@
 
 
 
-
+/* Below, I made a style for the HTML page to have an image as a background color and for the image to show up in a presentable manner. I also made the html page as wide as the actual web page and as tall as the actual web page. */
 html {
     background: url(684549.png) no-repeat fixed;
     background-size: 100% 100%;
@@ -11,11 +11,15 @@ html {
     width: 100%;
 }
 
+/* Below, I created a style that gives the body a width of 86% of the html page. */
 body {
     width: 86%;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
+}
+
+body::after {
     display: table;
     content: "";
     clear: both;
